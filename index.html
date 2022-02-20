@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Main layout:
+      Background Image
+          Game Section
+            In this section:
+              Input field - User will input number here
+              Check button - This will be used to submit and validate user input
+          Section for results
+            In this section:
+              Attempts field - Shows user how many attempts left  
+              Alert div - this will give responses based on user input
+              Try again button - this button will reset game-->
+
+
+      <main> 
+        <!-- Main is the container for the game section, results section and all related text items-->
+    <header>
+      <h1 id = "title">Guess The Number (1-10)</h1>
+    </header>
+      <section id = "input-field">        
+        <p id = "guess-statement">Enter your guess</p>
+        <input id = "number-input" type="number" required/>
+        <input  id = "check-button" type="submit" value = "CHECK"/>
+      </section>
+      <section id = "info-section">
+          <div id = "results-container">
+        <p id = "attempts-statement">Number of attempts: <span id = "attempt-number">3</span></p>
+        <div id = "messages">
+            <br>
+        </div>
+        <button id= "try-again">Try again</button>
+      </section>
+    </main>
+    <script src = "app.js"></script>
+  </body>
+</html>

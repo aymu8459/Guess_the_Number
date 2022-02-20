@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* background image located in body
+covers whole span of page. Image shows much better 
+on 27 in monitor but really depends on zoom of page*/
+body {
+    background-image: url(./magician.jpg);
+    background-repeat: none;
+    background-position-x: 50;       
+    background-size: 2200px 1400px;
+    /* positioning and sizing of image used to fit image on screen */
+    position: relative;
+}
+
+main {
+    position: absolute;
+    left: 60%;                /* positioning game on top right of page*/
+    margin-top: 50px;
+    /* width: 20%; */
+    /* border: 1px solid green;    */
+    /* borders temporarily used throughout css to position and style more efficiently.
+    They are commented out as they are not needed anymore. */ 
+    background: linear-gradient(rgba(230, 6, 211, 0.2),rgba(243, 186, 240, 0.3));
+    box-shadow: 3px 3px 10px rgba(235, 79, 235, 0.678); /*matching color scheme of background image */
+    /*added linear gradient and box shadow for cool effect */
+}
+header {
+    width: fit-content;
+    /* border: 1px solid yellow; */
+
+}
+
+#title {
+    color: rgb(245, 142, 245);
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+#input-field {
+    /* border: 1px solid pink; */
+    display: flex;                
+    /*display flex used to put guess statement, number input field and check button on same line */
+    justify-content: center; 
+    /* justify-content: center used to move these flex items to center. Later padding and margin used to 
+    provide separation for flex items */
+}
+
+#guess-statement {
+    font-size: 18px;
+    padding: 5px 5px 10px 0;
+    color:rgb(226, 215, 226);
+}
+
+#number-input {
+    padding: 2px;
+    width: 30%;
+    height: 50%;
+    margin: 8px 5px 0 8px;
+    border-radius: 5px; 
+    /* border-radius used to curve out edges of input field */
+    border: none;
+    outline: none;
+    text-align: center;
+    color: rgb(85, 15, 126);
+    box-shadow: 0 0 3px rgb(245, 142, 245);
+    background-color:rgb(226, 215, 226);
+}
+
+#number-input:focus {
+    box-shadow: 0px 0px 20px 4px rgb(245, 142, 245); 
+    /* ^ makes box shadow on input field when it is clicked on */
+    caret-color: rgb(85, 15, 126); /* changes color of input cursor */
+}
+
+#check-button {
+    background-color: rgba(17, 122, 243, 0.8);
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+#check-button:hover {
+    box-shadow: 0 0 10px 4px rgb(71, 174, 233);
+    cursor: pointer; 
+}
+
+#info-section {
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+#attempts-statement {
+    font-size: 18px;
+}
+
+#try-again {
+    visibility: hidden;
+    /* try again button by default is hidden until 
+    user either wins or loses game */
+    cursor: pointer;
+}
+
